@@ -1,4 +1,4 @@
-package mathematics.tree.node.operant;
+package mathematics.tree.node.operator;
 
 import java.math.BigDecimal;
 import java.util.HashMap;
@@ -11,14 +11,14 @@ import mathematics.tree.node.Operator;
 import mathematics.tree.node.operand.Value;
 import mathematics.tree.node.operand.value.Zero;
 
-public class Division extends Operator {
+public class Modulo extends Operator {
 
     private static final HashMap<Locale, String> names = new HashMap<Locale, String>(2);
-    private static final String character = "/";
+    private static final String character = "%";
 
     static {
-        names.put(Locale.ENGLISH, "divide");
-        names.put(Locale.SLOVAK, "deleno");
+        names.put(Locale.ENGLISH, "modulo");
+        names.put(Locale.SLOVAK, "zvyšok po delení");
     }
 
     public Node simplify() {
@@ -26,12 +26,10 @@ public class Division extends Operator {
         Node result = null;
 
         if (areBothChildValues() && !right.asValue().isValueZero()) {
-            BigDecimal vysledokDelenia = Calculator.divideChildren(this);
+            BigDecimal vysledokDelenia = Calculator.moduloChildren(this);
             result = new Value(vysledokDelenia);
         } else if (isLeftValue() && left.asValue().isValueZero()) {
             result = new Zero();
-        } else if (isRightValue() && right.asValue().isValueOne()) {
-            result = left;
         }
 
         return result;
@@ -64,9 +62,9 @@ public class Division extends Operator {
         return names.get(ApplicationSettings.getLocale());
     }
 
-    public Division makeClone() {
-        Division division = new Division();
-        return division;
+    public Modulo makeClone() {
+        Modulo modulo = new Modulo();
+        return modulo;
     }
 
     public String toString() {

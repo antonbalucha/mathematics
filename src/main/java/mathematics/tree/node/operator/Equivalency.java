@@ -1,4 +1,4 @@
-package mathematics.tree.node.operant;
+package mathematics.tree.node.operator;
 
 import java.util.HashMap;
 

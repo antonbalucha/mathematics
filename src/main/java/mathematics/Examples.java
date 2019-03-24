@@ -5,11 +5,11 @@ import mathematics.tree.node.operand.Value;
 import mathematics.tree.node.operand.Variable;
 import mathematics.tree.node.operand.constant.Pi;
 import mathematics.tree.node.operand.variable.Velocity;
-import mathematics.tree.node.operant.Division;
-import mathematics.tree.node.operant.Multiplication;
-import mathematics.tree.node.operant.Subtraction;
-import mathematics.tree.node.operant.Addition;
-import mathematics.tree.node.operant.Modulo;
+import mathematics.tree.node.operator.Addition;
+import mathematics.tree.node.operator.Division;
+import mathematics.tree.node.operator.Modulo;
+import mathematics.tree.node.operator.Multiplication;
+import mathematics.tree.node.operator.Subtraction;
 
 public class Examples {
 
