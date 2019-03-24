@@ -4,6 +4,10 @@
 
 Playground for mathematical operation by using binary trees and their evaluation/calculation.
 
+## Disclaimers
+
+Project uses variables/methods not in a way as in Java is recommended. Priority for me was simple usage, not source code according to coding standards. 
+
 # In conclusion
 
 ## License

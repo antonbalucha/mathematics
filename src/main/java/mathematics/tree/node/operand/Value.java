@@ -20,15 +20,15 @@ public class Value extends Operand {
     }
 
     public boolean isValueMinusOne() {
-        return this.val.equals(MinusOne.VALUE);
+        return this.val.equals(MinusOne.val);
     }
 
     public boolean isValueZero() {
-        return this.val.equals(Zero.VALUE);
+        return this.val.equals(Zero.val);
     }
 
     public boolean isValueOne() {
-        return this.val.equals(One.VALUE);
+        return this.val.equals(One.val);
     }
 
     public String output() {

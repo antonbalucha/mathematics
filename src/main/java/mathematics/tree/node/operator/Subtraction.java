@@ -1,9 +1,10 @@
 package mathematics.tree.node.operator;
 
+import static mathematics.ApplicationSettings.getLocale;
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 
-import mathematics.ApplicationSettings;
 import mathematics.Calculator;
 import mathematics.data.Locale;
 import mathematics.tree.Node;
@@ -46,7 +47,7 @@ public class Subtraction extends Operator {
     }
 
     public String name() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public String character() {
@@ -58,7 +59,7 @@ public class Subtraction extends Operator {
     }
 
     public String outputByWords() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public Subtraction makeClone() {

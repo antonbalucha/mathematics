@@ -1,8 +1,9 @@
 package mathematics.tree.node.operand.variable;
 
+import static mathematics.ApplicationSettings.getLocale;
+
 import java.util.HashMap;
 
-import mathematics.ApplicationSettings;
 import mathematics.data.Character;
 import mathematics.data.Locale;
 import mathematics.data.Name;
@@ -23,7 +24,7 @@ public class Distance extends Variable implements Name, Character {
     }
 
     public String name() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public String character() {
@@ -35,7 +36,7 @@ public class Distance extends Variable implements Name, Character {
     }
 
     public String outputByWords() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public Distance makeClone() {

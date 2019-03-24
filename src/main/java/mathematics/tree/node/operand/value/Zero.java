@@ -6,18 +6,18 @@ import mathematics.tree.node.operand.Value;
 
 public class Zero extends Value {
 
-    public static final BigDecimal VALUE = new BigDecimal("0");
+    public static final BigDecimal val = new BigDecimal("0");
 
     public Zero() {
-        super(VALUE);
+        super(val);
     }
 
     public String output() {
-        return VALUE.toString();
+        return val.toString();
     }
 
     public String outputByWords() {
-        return VALUE.toString();
+        return val.toString();
     }
 
     public Zero makeClone() {

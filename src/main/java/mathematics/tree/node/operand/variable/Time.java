@@ -1,12 +1,12 @@
 package mathematics.tree.node.operand.variable;
 
-import mathematics.data.Name;
+import static mathematics.ApplicationSettings.getLocale;
 
 import java.util.HashMap;
 
-import mathematics.ApplicationSettings;
 import mathematics.data.Character;
 import mathematics.data.Locale;
+import mathematics.data.Name;
 import mathematics.tree.node.operand.Variable;
 
 public class Time extends Variable implements Name, Character {
@@ -24,7 +24,7 @@ public class Time extends Variable implements Name, Character {
     }
 
     public String name() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public String character() {
@@ -36,7 +36,7 @@ public class Time extends Variable implements Name, Character {
     }
 
     public String outputByWords() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public Time makeClone() {

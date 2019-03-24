@@ -1,8 +1,9 @@
 package mathematics.tree.node.operator;
 
+import static mathematics.ApplicationSettings.getLocale;
+
 import java.util.HashMap;
 
-import mathematics.ApplicationSettings;
 import mathematics.data.Locale;
 import mathematics.tree.Node;
 import mathematics.tree.node.Operator;
@@ -26,7 +27,7 @@ public class Equivalency extends Operator {
     }
 
     public String name() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public String character() {
@@ -38,7 +39,7 @@ public class Equivalency extends Operator {
     }
 
     public String outputByWords() {
-        return names.get(ApplicationSettings.getLocale());
+        return names.get(getLocale());
     }
 
     public Equivalency makeClone() {
